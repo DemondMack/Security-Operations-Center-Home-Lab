@@ -48,8 +48,10 @@ Kibana installation & setup:  <br/>
 <br />
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Windows Server seperated from VPC:  <br/>
+<img src="https://i.imgur.com/o2grXTy.jpeg" height="80%" width="80%" />
+<p>Deployed a Windows Server 2022 on Vultr using the shared CPU option. The server was set up without being part of the Virtual Private Cloud (VPC) to isolate it from other critical infrastructure. Configured the server and verified Remote Desktop Protocol (RDP) access to ensure it's exposed to the internet. The server will start generating logs for future analysis of unsuccessful login attempts.</p>
+<br />
 <br />
 <br />
 Sanitization complete:  <br/>
