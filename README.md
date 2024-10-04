@@ -70,6 +70,14 @@ Sysmon installation:  <br/>
 <img src="https://i.imgur.com/KcM0yLC.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/NLHMqsW.jpeg" height="80%" width="80%" />
 <p>Installed and configured Sysmon on the Windows Server. Downloaded Sysmon from Microsoft Learn and retrieved a popular configuration file from GitHub. Using PowerShell, installed Sysmon as a service and confirmed its successful setup by checking the Windows Event Viewer for Sysmon logs. Verified that Sysmon was capturing network connections and generating logs for further monitoring.</p>
+<br />
+<br />
+<br />
+Intergrated Sysmon & Microsoft Defender:  <br/>
+<img src="https://i.imgur.com/9FOaHUI.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/rOaZ4Js.jpeg" height="80%" width="80%" />
+<p>Added integrations for Sysmon and Microsoft Defender into the Elasticsearch instance, allowing the collection of logs from custom Windows Event channels. Configured specific event IDs for ingestion, such as 1116, 1117, and 50001, for more targeted logging. Troubleshooting included ensuring connectivity between agents and Elasticsearch by allowing incoming connections on port 9200. Verified Sysmon and Defender logs were successfully ingested into the instance.</p>
+
 
 <!--
  ```diff
