@@ -54,8 +54,14 @@ Windows Server seperated from VPC:  <br/>
 <br />
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Fleet Server with Elastic Agent and Windows Server enrolled:  <br/>
+<img src="https://i.imgur.com/uXz0c3B.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/ypcURGK.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/T5iRfce.jpeg" height="80%" width="80%" />
+
+
+
+
 <br />
 <br />
 Observe the wiped disk:  <br/>
