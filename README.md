@@ -84,6 +84,14 @@ Ubuntu SSH server Authentication Logs:  <br/>
 <img src="https://i.imgur.com/ZgyesUv.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/SzLhOqG.jpeg" height="80%" width="80%" />
 <p>Deployed an Ubuntu server on Vultr for monitoring SSH authentication logs. Configured the server, updated repositories, and used PowerShell to SSH into the instance. Accessed authentication logs in /var/log/auth.log to identify failed login attempts, specifically filtering for failed root login attempts. Used the grep and cut commands to extract and display the failed login IP addresses. Prepared the server for monitoring failed brute-force attacks and planned to install the Elastic Agent for log forwarding to Elasticsearch.</p>
+<br />
+<br />
+<br />
+Alert & Dashboard creation for SSH activity:  <br/>
+<img src="https://i.imgur.com/Pe2DPyq.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/9TMIaOU.jpeg" height="80%" width="80%" />
+<p>Ingested logs from the SSH server into Elasticsearch and queried for brute force activity by filtering logs based on agent name, user, and source IP to identify failed authentication attempts. Saved the search as "SSH Failed Activity" and created an alert for brute force attempts, setting thresholds to trigger the alert when more than five failed login attempts occur within five minutes. Additionally, created a dashboard in Elasticsearch Maps to visualize the geographic source of these attempts using the source IP’s geolocation. Duplicated the dashboard to track successful SSH authentication attempts. This setup allows for both alerting on brute force activity and monitoring the source of the attacks in real time.</p>
+
 
 
 
