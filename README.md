@@ -65,9 +65,11 @@ Fleet Server with Elastic Agent and Windows Server enrolled:  <br/>
 
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+Sysmon installation:  <br/>
+<img src="https://i.imgur.com/MlnUpcj.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/KcM0yLC.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/NLHMqsW.jpeg" height="80%" width="80%" />
+<p>Installed and configured Sysmon on the Windows Server. Downloaded Sysmon from Microsoft Learn and retrieved a popular configuration file from GitHub. Using PowerShell, installed Sysmon as a service and confirmed its successful setup by checking the Windows Event Viewer for Sysmon logs. Verified that Sysmon was capturing network connections and generating logs for further monitoring.</p>
 
 <!--
  ```diff
