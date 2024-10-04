@@ -77,6 +77,15 @@ Intergrated Sysmon & Microsoft Defender:  <br/>
 <img src="https://i.imgur.com/9FOaHUI.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/rOaZ4Js.jpeg" height="80%" width="80%" />
 <p>Added integrations for Sysmon and Microsoft Defender into the Elasticsearch instance, allowing the collection of logs from custom Windows Event channels. Configured specific event IDs for ingestion, such as 1116, 1117, and 50001, for more targeted logging. Troubleshooting included ensuring connectivity between agents and Elasticsearch by allowing incoming connections on port 9200. Verified Sysmon and Defender logs were successfully ingested into the instance.</p>
+<br />
+<br />
+<br />
+Ubuntu SSH server Authentication Logs:  <br/>
+<img src="https://i.imgur.com/ZgyesUv.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/SzLhOqG.jpeg" height="80%" width="80%" />
+<p>Deployed an Ubuntu server on Vultr for monitoring SSH authentication logs. Configured the server, updated repositories, and used PowerShell to SSH into the instance. Accessed authentication logs in /var/log/auth.log to identify failed login attempts, specifically filtering for failed root login attempts. Used the grep and cut commands to extract and display the failed login IP addresses. Prepared the server for monitoring failed brute-force attacks and planned to install the Elastic Agent for log forwarding to Elasticsearch.</p>
+
+
 
 
 <!--
