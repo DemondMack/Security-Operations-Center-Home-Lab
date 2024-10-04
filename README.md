@@ -58,6 +58,7 @@ Fleet Server with Elastic Agent and Windows Server enrolled:  <br/>
 <img src="https://i.imgur.com/uXz0c3B.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/ypcURGK.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/T5iRfce.jpeg" height="80%" width="80%" />
+<p>Deployed an Ubuntu server to act as the Fleet Server in the cloud and configured it to manage agents centrally. Installed and configured the Elastic Agent on the Fleet Server and addressed connection issues by adjusting firewall rules for both the Fleet Server and Elasticsearch (port 9200 and 8220). Successfully enrolled the Windows Server into the Fleet, allowing for system logs and metrics collection. Finally, captured initial authentication logs from the Windows server, verifying the setup.</p>
 
 
 
