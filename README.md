@@ -95,6 +95,17 @@ Alert & Dashboard creation for SSH activity:  <br/>
 To further strengthen monitoring, an alert for RDP brute force attempts was created, similar to the SSH brute force alert. This alert was configured to trigger after five failed login attempts within five minutes. Finally, a dashboard was developed for visualization, allowing for easy tracking of where these attacks are originating.
 This process emphasizes the importance of securing exposed services such as SSH and RDP by ensuring strong passwords, multi-factor authentication (MFA), and limited access, as they are prime targets for brute force attacks.</p>
 
+<br />
+<br />
+<br />
+Attack Diagram: <br/>
+<img src="https://i.imgur.com/5z9BUMl.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/cHHsWah.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/BpgyWXU.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/U0typtC.jpeg" height="80%" width="80%" />
+<p>Created an attack diagram using draw.io to map out a cyber attack involving a Mythic C2 server, Windows server, and an attacker laptop running Kali Linux. The process included six phases: RDP brute force for initial access, running discovery commands, disabling Windows Defender for defense evasion, downloading and executing a Mythic agent via PowerShell for execution, establishing a C2 session, and exfiltrating a fake password file (passwords.txt). This diagram served as a visual guide for planning and executing the attack path in a controlled environment.</p>
+
+
 
 
 
