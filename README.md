@@ -103,7 +103,29 @@ Attack Diagram: <br/>
 <img src="https://i.imgur.com/cHHsWah.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/BpgyWXU.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/U0typtC.jpeg" height="80%" width="80%" />
-<p>Created an attack diagram using draw.io to map out a cyber attack involving a Mythic C2 server, Windows server, and an attacker laptop running Kali Linux. The process included six phases: RDP brute force for initial access, running discovery commands, disabling Windows Defender for defense evasion, downloading and executing a Mythic agent via PowerShell for execution, establishing a C2 session, and exfiltrating a fake password file (passwords.txt). This diagram served as a visual guide for planning and executing the attack path in a controlled environment.</p>
+<p>Created an attack diagram using draw.io to map out a cyber attack involving a Mythic C2 server, Windows server, and an attacker laptop running Kali Linux. The process included six phases: RDP brute force for initial access, running discovery commands, disabling Windows Defender for defense evasion, downloading and executing a Mythic agent via PowerShell for execution, establishing a C2 session, and exfiltrating a fake password file (passwords.txt). This diagram served as a visual guide for planning and executing the attack path in a controlled environment. Now it's time to attack!!!</p>
+<br />
+<br />
+<br />
+
+
+Mythic Server Intialization: <br/>
+<img src="https://i.imgur.com/F70KHGl.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/6tEEO0V.jpeg" height="80%" width="80%" />
+<br />
+
+Brute Force process: <br/>
+<img src="https://i.imgur.com/pDtFS5s.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/fBvF9hv.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/OBrvihs.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/x7rZIqv.jpeg" height="80%" width="80%" />
+
+
+
+
+
+
+
 
 
 
