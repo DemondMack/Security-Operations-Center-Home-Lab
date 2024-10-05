@@ -117,8 +117,11 @@ Mythic Server Intialization: <br/>
 Brute Force process: <br/>
 <img src="https://i.imgur.com/pDtFS5s.jpeg" height="80%" width="80%" />
 <img src="https://i.imgur.com/fBvF9hv.jpeg" height="80%" width="80%" />
+<br />
+C2 connection Established: <br/>
 <img src="https://i.imgur.com/OBrvihs.jpeg" height="80%" width="80%" />
-<img src="https://i.imgur.com/x7rZIqv.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/Ry8Qbqk.jpeg" />
+<p>I deployed a Mythic C2 server using Vultr and configured it with Docker and Kali Linux. The attack involved brute forcing an RDP login on a Windows server, performing discovery commands, disabling Windows Defender, and executing a Mythic agent generated with a C2 profile. The agent was downloaded via PowerShell, establishing a C2 connection. Using the active session, I exfiltrated a fake password file (passwords.txt) from the Windows server. This process demonstrated the complete attack path, from initial access to exfiltration, using Mythic C2 and Kali Linux.</p>
 
 
 
