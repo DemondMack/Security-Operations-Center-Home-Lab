@@ -122,13 +122,27 @@ C2 connection Established: <br/>
 <img src="https://i.imgur.com/OBrvihs.jpeg" height="80%" width="80%" />
 <br />
 File Downloaded from host: <br/>
-<img src="https://i.imgur.com/Ry8Qbqk.jpeg" />
+<img src="https://i.imgur.com/Ry8Qbqk.jpeg" height="80%" width="80%" />
 <p>I deployed a Mythic C2 server using Vultr and configured it with Docker and Kali Linux. The attack involved brute forcing an RDP login on a Windows server, performing discovery commands, disabling Windows Defender, and executing a Mythic agent generated with a C2 profile. The agent was downloaded via PowerShell, establishing a C2 connection. Using the active session, I exfiltrated a fake password file (passwords.txt) from the Windows server. This process demonstrated the complete attack path, from initial access to exfiltration, using Mythic C2 and Kali Linux.</p>
 <br />
 <br />
 The next steps in this project is the investigation: <br/>
 <br />
 <br />
+<br />
+Query for Process Creation(event code:1) & Original file name(Apollo.exe): <br/>
+<img src="https://i.imgur.com/L80hlDC.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/77UWFgc.jpeg" height="80%" width="80%" />
+<br />
+Alert created for Mythic/Apollo agent: <br/>
+<img src="https://i.imgur.com/x9HsLVg.jpeg" height="80%" width="80%" />
+<br />
+Suspicious activity dashboard: <br/>
+<img src="https://i.imgur.com/VLRO2zS.jpeg" height="80%" width="80%" />
+<p>I created an alert in Elastic for Mythic C2 activity by querying logs for our service host executable and correlating Sysmon event codes. First, I searched for process creation events (event code 1) and extracted the SHA-256 hash and original file name (Apollo.exe). Then, I used these fields to build a query and alert that triggers on process creation involving the Apollo agent. Finally, I created a custom dashboard that monitors suspicious activity, including process creation events for PowerShell and CMD, network connections, and Defender being disabled, offering at-a-glance insights into potentially malicious activity.</p>
+
+
+
 
 
 
