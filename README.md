@@ -140,6 +140,30 @@ Alert created for Mythic/Apollo agent: <br/>
 Suspicious activity dashboard: <br/>
 <img src="https://i.imgur.com/VLRO2zS.jpeg" height="80%" width="80%" />
 <p>I created an alert in Elastic for Mythic C2 activity by querying logs for our service host executable and correlating Sysmon event codes. First, I searched for process creation events (event code 1) and extracted the SHA-256 hash and original file name (Apollo.exe). Then, I used these fields to build a query and alert that triggers on process creation involving the Apollo agent. Finally, I created a custom dashboard that monitors suspicious activity, including process creation events for PowerShell and CMD, network connections, and Defender being disabled, offering at-a-glance insights into potentially malicious activity.</p>
+<br />
+<br />
+<br />
+Ticketing system: <br/>
+<img src="https://i.imgur.com/YAkU8Yr.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/R7YriON.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/e2xwm2E.jpeg" height="80%" width="80%" />
+<br />
+Elastic Defender: <br/>
+<img src="https://i.imgur.com/jYip6R0.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/IhA8ukM.jpeg" height="80%" width="80%" />
+<img src="https://i.imgur.com/htj8pnY.jpeg" height="80%" width="80%" />
+<p>The setup process started with osTicket, where a Windows server was deployed, and XAMPP was installed to host the osTicket instance. Configuration included editing Apache and PHP settings, creating databases, and setting firewall rules for web server security. osTicket was then integrated with Elasticsearch using an API key, enabling automatic ticket generation for alerts.
+
+Next, the investigation of SSH brute force attacks was demonstrated by querying Elasticsearch for specific IPs and users involved in the attacks. Tools like AbuseIPDB and GreyNoise were used to assess the threat level of the IPs. Similar methodologies were applied to RDP brute force investigations, where IP reputation was checked, and failed/successful login attempts were analyzed.
+
+The investigation of Mythic C2 focused on process creation and network connections. Sysmon telemetry and process GUIDs were used to track C2 agent behavior, file creations, and outbound connections, particularly for the agent named servicehost.exe. Powershell commands and network connections were analyzed to understand the C2 activity timeline.
+
+Lastly, Elastic Defend (Elastic's EDR solution) was installed to monitor and protect endpoints. The tool blocked malicious files like mydfir-30.exe, provided detailed telemetry (file hashes, paths, etc.), and isolated compromised hosts. Elastic Defend's features, such as real-time detection and prevention, were highlighted, along with host isolation.</p>
+
+
+
+
+
 
 
 
