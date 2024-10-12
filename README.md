@@ -161,8 +161,72 @@ The investigation of Mythic C2 focused on process creation and network connectio
 Lastly, Elastic Defend (Elastic's EDR solution) was installed to monitor and protect endpoints. The tool blocked malicious files like mydfir-30.exe, provided detailed telemetry (file hashes, paths, etc.), and isolated compromised hosts. Elastic Defend's features, such as real-time detection and prevention, were highlighted, along with host isolation.</p>
 <br/>
 <br/>
-<b>Conclusion<b> <br />
-<p>Throughout this project, I demonstrated a range of essential SOC analyst skills, including setting up and managing tools for logging, monitoring, and incident response. By integrating ELK with OS Ticket, I created an efficient alert-to-ticketing system, streamlining incident management. I also successfully orchestrated a combination of host-based and network telemetry monitoring to detect, analyze, and respond to potential threats. Overall, this project highlights my technical expertise in creating a comprehensive SOC environment, demonstrating strong investigative techniques, threat detection, and response capabilities essential for maintaining network security.</p>
+
+<h2>Mitigation & Prevention </h2>
+
+<b>1. Strengthen Access Controls:</b> (RDP and SSH Access Restrictions)
+- Limit RDP and SSH access to only trusted IP ranges by configuring strict firewall rules.
+- Disable RDP and SSH on public-facing servers whenever possible or restrict to VPN-only access.
+- Use secure SSH key-based authentication instead of password-based authentication for SSH.
+- Enable MFA for all RDP and SSH connections. This adds an additional layer of security to prevent unauthorized access even if credentials are compromised.
+<br/>
+
+<b>2. Password Policies:</b> (Enforce strong password policies to prevent brute force attacks)
+
+- Require complex passwords with a combination of uppercase, lowercase, numbers, and symbols.
+- Implement account lockout policies after a set number of failed login attempts, especially for RDP and SSH.
+- Regularly rotate passwords and educate users on best password management practices.
+<br/>
+
+<b>3. System and Network Hardening:</b> (Patch Management & Disabling Unnecessary Services)
+
+- Regularly update and patch all systems and software, particularly public-facing services like RDP, to address vulnerabilities.
+- Use vulnerability scanners (such as Wazuh or Nessus) to detect and patch known vulnerabilities in the environment.
+- Disable unnecessary services, such as RDP or certain network protocols, on critical systems that don’t require them.
+- Regularly audit exposed ports and services to reduce the attack surface area.
+<br/>
+
+<b>4. Implement Network Segmentation:</b> 
+
+- Isolate sensitive resources from public networks using Virtual Private Clouds (VPC) and VLANs.
+- Segregate systems with different security requirements into separate network zones to contain potential attacks.
+<br/>
+
+<b>5. Monitor and Analyze Logs:</b> (Real-time Monitoring & Log Forwarding to SIEM) 
+
+- Continuously monitor RDP and SSH login attempts by collecting logs and creating alerts for suspicious activity (such as repeated failed logins) using Sysmon and ELK.
+- Forward logs from both Windows and Linux servers to Elasticsearch (or another SIEM) for centralized monitoring.
+- Use tools like Fail2Ban (for SSH) to automatically ban IPs after repeated login failures, updating firewall rules dynamically.
+<br/>
+
+<b>6. Implement Application Whitelisting & Integrity Checking:</b> 
+
+- Limit executable files to only authorized, trusted software using application whitelisting.
+- Use integrity checking solutions (e.g., Tripwire) to monitor system files for unauthorized changes, such as in the case of file exfiltration or C2 agent installation.
+<br/>
+
+<b>7. Security Awareness Training:</b> 
+
+- Train employees and system administrators on detecting phishing attempts and the importance of avoiding weak RDP and SSH credentials.
+- Provide ongoing training about social engineering, phishing threats, and malware to minimize human errors.
+<br/>
+
+<b>8. Deploy Endpoint Detection and Response (EDR):</b> 
+
+- Use Elastic Defend or another EDR tool to detect suspicious activity, such as execution of unauthorized scripts or suspicious network connections (like the Mythic C2 server).
+- Configure alerts for any abnormal PowerShell or CMD executions, especially in conjunction with disabled security tools like Defender.
+<br/>
+
+<b>9.  Incident Response Playbooks:</b> 
+
+- Develop and maintain incident response playbooks for handling brute force attacks, malware infections, and unauthorized remote access attempts.
+- Conduct regular tabletop exercises and security drills to ensure that the team is prepared to respond to similar incidents.
+<br/>
+<p>These steps will help make the environment more resilient to brute force attacks, malware deployment, and unauthorized remote access attempts. They are directly relevant to the attacks I simulated in this project and real-world scenarios, and will significantly strengthen the overall security posture.</p>
+<br/>
+<h2>Conclusion </h2>
+
+<p>Throughout this project, I demonstrated a wide range of essential SOC analyst skills, including setting up and managing tools for logging, monitoring, and incident response. By integrating ELK with osTicket, I streamlined incident management through an efficient alert-to-ticketing system. I combined host-based and network telemetry monitoring to detect, analyze, and respond to potential threats. Additionally, I implemented a mitigation and prevention strategy to bolster defenses against the types of attacks simulated in this project. Overall, this project highlights my technical expertise in creating a comprehensive SOC environment, showcasing strong investigative techniques, threat detection, response capabilities, and proactive security measures critical for maintaining network security.</p>
 
 
 
